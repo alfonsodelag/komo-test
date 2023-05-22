@@ -5,13 +5,13 @@ import { BsMessenger } from "react-icons/bs";
 export const adminList: CommonListType[] = [
   {
     name: 'Manage Social Media',
-    link: '/screen/manageSocialMedia',
+    link: '/manage-social-media',
     enabled: true,
     icon: AiOutlineEdit,
   },
   {
     name: 'Community Messages',
-    link: '/',
+    link: '/community-messages',
     enabled: false,
     tooltip: 'Coming Soon',
     icon: BsMessenger,

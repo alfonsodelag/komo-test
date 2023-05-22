@@ -1,4 +1,4 @@
-export interface ListViewProps {
+export interface ListProps {
   item: {
     name?: string;
     link?: string;

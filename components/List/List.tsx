@@ -1,9 +1,10 @@
-import Image from "next/image";
-import { ListViewProps } from "./ListProps";
+import { ListProps } from "./ListProps";
 import { useRouter } from "next/router";
 
-const List = ({ item }: ListViewProps) => {
+const List = ({ item }: ListProps) => {
   const router = useRouter();
+
+  console.log("item.link", item.link);
 
   const handleButtonClick = () => {
     router.push("/manage-social-media");
