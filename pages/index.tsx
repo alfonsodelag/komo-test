@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <div className="text-2xl font-bold text-center rounded-xl">
           Komon Creator Dashboard
           {adminList.map((item, index) => (
-            <div key={index} className="flex">
+            <div key={index}>
               <List key={index} item={item} />
             </div>
           ))}

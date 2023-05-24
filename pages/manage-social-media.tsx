@@ -1,6 +1,7 @@
+import { useRouter } from "next/router";
+import Link from "next/link";
 import List from "../components/List/List";
 import { socialMediaList } from "../data";
-import { useRouter } from "next/router";
 
 const ManageSocialMedia = () => {
   const router = useRouter();
@@ -17,11 +18,14 @@ const ManageSocialMedia = () => {
       <h1 className="text-2xl font-bold mb-10 text-center">
         Manage Social Media
       </h1>
-      <div className="flex justify-between">
-        {socialMediaList.map((item, index) => {
-          return <List key={index} item={item} />;
-        })}
-      </div>
+      {socialMediaList.map((item, index) => {
+        const slug = item?.name?.toLowerCase();
+        return (
+          <Link href={`/manage-social-media/social-media/${slug}`} key={index}>
+            <List item={item} />
+          </Link>
+        );
+      })}
     </div>
   );
 };

@@ -7,17 +7,17 @@ import Image from "next/image";
 
 const Instagram = () => {
   const router = useRouter();
-  const { socialMedia } = router.query;
+  const { slug } = router.query;
   const [data, setData] = useState<ResponseData[]>([]);
 
   useEffect(() => {
     async function fetchData() {
-      const res = await getUserInfo(socialMedia as string);
+      const res = await getUserInfo(slug as string);
       setData(res);
     }
 
     fetchData();
-  }, [socialMedia]);
+  }, [slug]);
 
   const handleGoBack = () => {
     router.back();
@@ -32,7 +32,7 @@ const Instagram = () => {
       {data.length > 0 ? (
         <ul>
           {data.map((item) => (
-            <div key={item.id}>
+            <div key={item.id} className="mb-10">
               <div className="flex flex-col m-auto items-center gap-4 mb-4 bg-white rounded-xl md:w-2/3 xl:w-1/4 p-4">
                 <Image
                   className="rounded-md"
