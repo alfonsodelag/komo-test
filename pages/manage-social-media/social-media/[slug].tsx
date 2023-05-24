@@ -30,7 +30,7 @@ const Instagram = () => {
       <button onClick={handleGoBack} className="mt-4">
         Go Back
       </button>
-      <h1 className="mb-10 text-white text-center text-3xl">
+      <h1 className="mb-10 text-white text-center text-3xl font-bold">
         Social Media Connections
       </h1>
       {data.length > 0 ? (
