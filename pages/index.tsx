@@ -13,13 +13,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div className="text-2xl font-bold text-center rounded-xl border-2 border-teal-600">
+        <div className="text-2xl font-bold text-center rounded-xl">
           Komon Creator Dashboard
-          <div className="mt-16">
-            {adminList.map((item, index) => {
-              return <List key={index} item={item} />;
-            })}
-          </div>
+          {adminList.map((item, index) => (
+            <div key={index} className="flex">
+              <List key={index} item={item} />
+            </div>
+          ))}
         </div>
       </main>
     </div>

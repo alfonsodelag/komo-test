@@ -1,30 +1,32 @@
+import Image from "next/image";
 import { ListProps } from "./ListProps";
 import { useRouter } from "next/router";
 
 const List = ({ item }: ListProps) => {
   const router = useRouter();
 
-  console.log("item.link", item.link);
+  const { name, link, avatar_url, bio, followers } = item;
 
   const handleButtonClick = () => {
-    router.push("/manage-social-media");
+    if (link) {
+      router.push(link);
+    }
   };
 
   const Icon = item?.icon;
 
   return (
-    <div className="border-b-1 border-gray-800 pl-0 md:pl-4 pr-0 md:pr-5 py-2.5 my-3">
-      <button
-        onClick={handleButtonClick}
-        className="flex items-center justify-between space-x-2 md:space-x-3"
-      >
+    <div className="pl-0 md:pl-4 pr-0 md:pr-5 py-2.5 my-3 flex items-center">
+      {avatar_url && (
+        <Image src={avatar_url} alt="avatar" width={30} height={30} />
+      )}
+      <button onClick={handleButtonClick}>
         <div className="px-2">
           <div className="flex items-center gap-4">
-            <Icon />
-            <p className="font-mono text-gray-800 font-bold">{item.name}</p>
+            {Icon && <Icon />}
+            <p className="font-mono text-white font-bold text-xl">{name}</p>
           </div>
         </div>
-        <div className="flex-grow"></div>
       </button>
     </div>
   );

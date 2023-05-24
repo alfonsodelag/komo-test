@@ -1,34 +1,34 @@
-import { CommonListType } from '../types';
-import {BsInstagram} from "react-icons/bs"
-import {BsTiktok} from "react-icons/bs";
-import {BsDiscord} from "react-icons/bs";
-import {BsLinkedin} from "react-icons/bs";
+import { CommonListType } from "../types";
+import { BsInstagram } from "react-icons/bs";
+import { BsTiktok } from "react-icons/bs";
+import { BsDiscord } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 
 export const socialMediaList: CommonListType[] = [
   {
-    name: 'Instagram',
+    name: "Instagram",
     icon: BsInstagram,
-    link: '/pages',
+    link: "/manage-social-media/social-media/instagram",
     enabled: true,
   },
   {
-    name: 'TikTok',
+    name: "TikTok",
     icon: BsTiktok,
-    link: '/pages',
+    link: "/manage-social-media/social-media/tiktok",
     enabled: true,
   },
   {
-    name: 'Discord',
+    name: "Discord",
     icon: BsDiscord,
-    link: '/pages',
-    tooltip: 'Coming Soon',
-    enabled: false,
+    link: "/manage-social-media/social-media/discord",
+    tooltip: "Coming Soon",
+    enabled: true,
   },
   {
-    name: 'LinkedIn',
+    name: "LinkedIn",
     icon: BsLinkedin,
-    link: '/pages',
-    tooltip: 'Coming Soon',
-    enabled: false,
+    link: "/manage-social-media/social-media/[slug]",
+    tooltip: "Coming Soon",
+    enabled: true,
   },
 ];
