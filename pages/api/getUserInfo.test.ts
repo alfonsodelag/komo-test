@@ -14,7 +14,7 @@ describe('get user Info', () => {
         followers: '124',
         id: 1,
         name: 'Testing',
-        latestPost: [],
+        lastestPost: [],
       },
     ]);
   });

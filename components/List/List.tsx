@@ -18,7 +18,7 @@ const List = ({ item }: ListProps) => {
   return (
     <div className="pl-0 md:pl-4 pr-0 md:pr-5 py-2.5 my-3 flex items-center">
       {avatar_url && (
-        <Image src={avatar_url} alt="avatar" width={30} height={30} />
+        <Image src={avatar_url} alt="avatar" width={50} height={50} />
       )}
       <button onClick={handleButtonClick}>
         <div className="px-2">

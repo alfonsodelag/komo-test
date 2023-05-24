@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_BASE = 'https://api.npoint.io/370fc4db2db84ad88075';
 
-export interface LatestPost {
+export interface lastestPost {
   postId: number;
   postImage: string;
   type: 'img' | 'video';
@@ -14,7 +14,7 @@ export interface ResponseData {
   followers: string;
   id: number;
   name: string;
-  latestPost: LatestPost[];
+  lastestPost: lastestPost[];
 }
 
 export const getUserInfo = async (

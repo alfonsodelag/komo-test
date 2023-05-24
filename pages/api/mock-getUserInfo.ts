@@ -10,7 +10,7 @@ export const mockGetUserInfo = async (
       followers: '124',
       id: 1,
       name: 'Testing',
-      latestPost: [],
+      lastestPost: [],
     },
   ]);
 };

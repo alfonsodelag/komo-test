@@ -13,8 +13,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div className="text-2xl font-bold text-center rounded-xl">
-          Komon Creator Dashboard
+        <div className="font-bold text-center rounded-xl">
+          <h1 className="text-3xl text-white mb-20">Komon Creator Dashboard</h1>
           {adminList.map((item, index) => (
             <div key={index}>
               <List key={index} item={item} />

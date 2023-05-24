@@ -11,7 +11,7 @@ const ManageSocialMedia = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 p-4">
+    <div className="px-10 p-4">
       <button onClick={handleGoBack} className="mt-4">
         Go Back
       </button>

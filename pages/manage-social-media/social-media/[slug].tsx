@@ -23,12 +23,16 @@ const Instagram = () => {
     router.back();
   };
 
+  console.log("data", data);
+
   return (
-    <div className="p-4">
+    <div className="px-10 p-4">
       <button onClick={handleGoBack} className="mt-4">
         Go Back
       </button>
-      <h1 className="mb-10 text-white text-center">Social Media Connections</h1>
+      <h1 className="mb-10 text-white text-center text-3xl">
+        Social Media Connections
+      </h1>
       {data.length > 0 ? (
         <ul>
           {data.map((item) => (
@@ -48,6 +52,20 @@ const Instagram = () => {
                     Biography
                   </h1>
                   <p className="text-black text-left">{item.bio}</p>
+                </div>
+                <h1 className="text-black text-xl">Latest Posts</h1>
+                <div className="flex gap-4">
+                  {item?.lastestPost.map((post) => (
+                    <div key={post.postId}>
+                      <Image
+                        className="rounded-md"
+                        src={post.postImage}
+                        alt="post"
+                        width={80}
+                        height={80}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

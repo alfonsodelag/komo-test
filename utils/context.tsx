@@ -13,7 +13,7 @@ const defaultValues: AppContextType = {
     followers: "",
     id: 0,
     name: "",
-    latestPost: [],
+    lastestPost: [],
   },
   updateData: (data) => data,
 };
@@ -31,7 +31,7 @@ const AppProvider = ({ children }: AppProviderProps) => {
     followers: "",
     id: 0,
     name: "",
-    latestPost: [],
+    lastestPost: [],
   });
 
   const updateData = (newData: ResponseData) => {
